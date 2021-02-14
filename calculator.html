@@ -2,28 +2,63 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <body>     
-Ship:<i class="fas fa-space-shuttle"></i>
-<select class="form-select" aria-label="Default select example" >
-    <option selected>Ship</option>
-    <option value="1">f</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-    <option value="4">gh</option>
-    <option value="5">Two</option>
-    <option value="6">Three</option>
-  </select>
-<br>
-Vice:
-  <select class="form-select" aria-label="Default select example">
-    <option selected>Select</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-  <br>
-  Money:
-  <div class="input-group">
-  <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-  <span class="input-group-text">aUEC</span>
-</div>
+  <form class="row g-3 needs-validation" novalidate>
+
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltipUsername" class="form-label">Money:</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="validationTooltipUsernamePrepend">aUAC</span>
+        <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+        <div class="invalid-tooltip">
+          Please choose a unique and valid username.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltipUsername" class="form-label">Stockage Units:</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="validationTooltipUsernamePrepend">SCU</span>
+        <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+        <div class="invalid-tooltip">
+          Please choose a unique and valid username.
+        </div>
+      </div>
+    </div>
+    <br>
+    
+    <div class="col-md-3 position-relative">
+      <label for="validationTooltip04" class="form-label"><i class="fas fa-space-shuttle"></i></label>
+      <select class="form-select" id="validationTooltip04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>...</option>
+        <option>.1.</option>
+        <option>.1.</option>
+        <option>.1.</option>
+        <option>.1.</option>
+        <option>.1.</option>
+      </select>
+      <div class="invalid-tooltip">
+        Please select a valid state.
+      </div>
+    </div>
+
+    <div class="col-md-3 position-relative">
+      <label for="validationTooltip04" class="form-label"><i class="fas fa-pills"></i></label>
+      <select class="form-select" id="validationTooltip04" required>
+        <option selected disabled value="">Choose...</option>
+        <option>yes</option>
+        <option>no</option>
+
+      </select>
+      <div class="invalid-tooltip">
+        Please select a valid state.
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+
+  </form>
 </body>  
